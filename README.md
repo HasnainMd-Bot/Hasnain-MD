@@ -1,576 +1,622 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=SHEHBAZ-MD&fontSize=90&fontColor=fff&animation=twinkling&fontAlignY=40&desc=🤖+WhatsApp+Multi-Device+Bot&descAlignY=62&descSize=22&descColor=ffffff" width="100%"/>
+<img src="https://files.catbox.moe/x9rntx.png" width="150px" style="border-radius:50%;margin-bottom:10px"/>
+
+```
+███████╗██╗  ██╗███████╗██╗  ██╗██████╗  █████╗ ███████╗    ███╗   ███╗██████╗
+██╔════╝██║  ██║██╔════╝██║  ██║██╔══██╗██╔══██╗╚════██║    ████╗ ████║██╔══██╗
+███████╗███████║█████╗  ███████║██████╔╝███████║    ██╔╝    ██╔████╔██║██║  ██║
+╚════██║██╔══██║██╔══╝  ██╔══██║██╔══██╗██╔══██║   ██╔╝     ██║╚██╔╝██║██║  ██║
+███████║██║  ██║███████╗██║  ██║██████╔╝██║  ██║   ██║      ██║ ╚═╝ ██║██████╔╝
+╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝     ╚═╝╚═════╝
+```
+
+### 〔 ⚡ Advanced WhatsApp Multi-Device Bot 〕
 
 <br/>
 
-<img src="https://files.catbox.moe/x9rntx.png" width="330" alt="SHEHBAZ-MD Logo"/>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/Version-4.5.6-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
-<img src="https://img.shields.io/badge/Node.js-v20+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
-<img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
-<img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logoColor=white"/>
-
-<br/><br/>
-
-[![Stars](https://img.shields.io/github/stars/shehbaz-dev/Shehbaz-MD?style=for-the-badge&logo=github&color=00ffcc&labelColor=121212)](https://github.com/shehbaz-dev/Shehbaz-MD/stargazers)
-[![Forks](https://img.shields.io/github/forks/shehbaz-dev/Shehbaz-MD?style=for-the-badge&logo=git&color=00ffcc&labelColor=121212)](https://github.com/shehbaz-dev/Shehbaz-MD/network/members)
-[![Issues](https://img.shields.io/github/issues/shehbaz-dev/Shehbaz-MD?style=for-the-badge&logo=github-actions&color=ff0055&labelColor=121212)](https://github.com/shehbaz-dev/Shehbaz-MD/issues)
-
-
-
-<br/><br/>
-
- **Free · Open Source · Multi-Device**
->
-> *Make Your Own WhatsApp bot — Free And Easy!*
+[![Version](https://img.shields.io/badge/Version-4.5.6-blueviolet?style=for-the-badge&logo=github)](.)
+[![Node](https://img.shields.io/badge/Node.js-20%2B-brightgreen?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
+[![Baileys](https://img.shields.io/badge/Baileys-7.0.0--rc13-0088cc?style=for-the-badge)](https://github.com/WhiskeySockets/Baileys)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com)
+[![License](https://img.shields.io/badge/License-MIT-f0c040?style=for-the-badge)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/shehbaz-dev/shehbaz-md?style=for-the-badge&logo=starship&color=ff6b6b)](https://github.com/shehbaz-dev/shehbaz-md/stargazers)
+[![Forks](https://img.shields.io/github/forks/shehbaz-dev/shehbaz-md?style=for-the-badge&color=54a0ff)](https://github.com/shehbaz-dev/shehbaz-md/forks)
 
 <br/>
 
-[📦 Install](#-installation) &nbsp;•&nbsp; [⚡ Pair](#-pairing-guide) &nbsp;•&nbsp; [📋 Commands](#-commands) &nbsp;•&nbsp; [⚙️ Settings](#%EF%B8%8F-configuration) &nbsp;•&nbsp; [🖥️ Free Hosting](#%EF%B8%8F-free-hosting--panels) &nbsp;•&nbsp; [💬 Support](#-support)
+> **The most powerful WhatsApp bot you'll ever need.**  
+> Built on Baileys v7 · Multi-session · AI-powered · Anti-Delete · ViewOnce Bypass
+
+<br/>
+
+[🌟 Features](#-features) &nbsp;·&nbsp;
+[🚀 Quick Start](#-quick-start) &nbsp;·&nbsp;
+[⚙️ Configuration](#️-configuration) &nbsp;·&nbsp;
+[📋 Commands](#-all-commands) &nbsp;·&nbsp;
+[☁️ Deploy to Cloud](#️-deploy-to-cloud) &nbsp;·&nbsp;
+[🤝 Support](#-support)
 
 </div>
 
----
-
-> ## ⚠️ IMPORTANT WARNING — Termux Users Must Read
->
-> ```
-> ❌  DO NOT run this bot on Termux (Android)
-> ```
->
-> **Why?** Termux has known issues with:
-> - `node_modules` installation failures (permission errors)
-> - `npm install` crashing on native packages like `sharp`, `canvas`
-> - RAM limits on Android causing the bot to crash frequently
-> - Sessions breaking due to Android battery optimization killing the process
->
-> ✅ **Use a VPS or Free Panel instead** — see the [Free Hosting section](#%EF%B8%8F-free-hosting--panels) below.
+<br/>
 
 ---
 
-## ✨ What Can This Bot Do?
+<br/>
 
-<div align="center">
+## 🌟 Features
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td width="50%">
 
-**🔒 Protection**
-
-Anti-Delete Messages<br/>
-Anti-Call Reject<br/>
-Anti-Link in Groups<br/>
-Owner-Only Mode
-
-</td>
-<td align="center" width="33%">
-
-**⚡ Automation**
-
-Auto React to Messages<br/>
-Auto Read Messages<br/>
-Auto Reply in DMs<br/>
-Auto View Statuses
+### 🛡️ Security & Protection
+- **Anti-Delete** — Deleted messages forwarded to your inbox instantly with sender info + original media (images, videos, audio, stickers, documents)
+- **Anti-Call** — Auto-reject all incoming calls silently
+- **Anti-Link** — Remove group invite links from non-admins automatically
+- **Anti-Bot** — Block other bots from interacting
+- **Anti-Bad Word** — Auto-remove abusive messages in groups
 
 </td>
-<td align="center" width="33%">
+<td width="50%">
 
-**☁️ Cloud**
+### 👁️ Privacy Guard
+- **ViewOnce Bypass** — Reply to any 👁️ message and `.vv` reveals it instantly — photo, video, or audio
+- **Auto ViewOnce Intercept** — Every view-once sent to you is silently copied to your inbox before it disappears
+- **Auto Status Seen** — View all WhatsApp statuses automatically in the background
 
-MongoDB Session Storage<br/>
-Multi-Session Support<br/>
-Auto Reconnect<br/>
-QR-less Pairing
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🤖 AI-Powered Chat
+- **Direct AI Query** — `.ai <question>` anywhere in any chat
+- **AI DM Auto-Reply** — `.ai on` turns your bot into a smart assistant that replies automatically in private chats
+- **Free AI Engine** — Uses **Pollinations.ai** (zero cost, no API key required)
+- **OpenAI Compatible** — Plug in your `OPENAI_API_KEY` for GPT-3.5/GPT-4
+- **Custom Endpoint** — Any OpenAI-compatible API (OpenRouter, Together.ai, etc.)
+
+</td>
+<td width="50%">
+
+### ⚙️ Group Management
+- Promote / Demote admins
+- Kick members
+- Mute / Unmute groups
+- Silent hidetag (tag all without notification)
+- Warning system with tracking
+- Broadcast to all groups at once
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📥 Media Downloaders
+- 🎬 **YouTube** — Video & audio download
+- 🎵 **TikTok** — No watermark download
+- 📸 **Instagram** — Reels, photos, stories
+- 📘 **Facebook** — Video download
+- ☁️ **Google Drive** — Direct download
+- 🔥 **MediaFire** — Direct download
+- 📦 **APK Finder** — Find & share Android apps
+
+</td>
+<td width="50%">
+
+### 🎨 Tools & Media
+- **Sticker Maker** — Image/video/GIF → WhatsApp sticker
+- **Background Remover** — AI-powered `.removebg`
+- **Image Enhancer** — Upscale with `.remini`
+- **Fancy Text** — 30+ unicode font styles
+- **Calculator** — Math solver
+- **URL Shortener** — Compress any link
+- **Wikipedia Search** — Instant summaries
+- **Weather** — Real-time weather by city
+- **SIM Info** — Number lookup
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### ⚡ Performance
+- **Multi-Session** — Connect multiple WhatsApp numbers to one instance
+- **Auto Typing** — Shows typing indicator while processing
+- **Auto React** — Random emoji reactions to messages
+- **Smart Reconnect** — Auto-reconnect with exponential backoff on disconnect
+- **MongoDB Session** — Session persists across restarts, no re-scan needed
+
+</td>
+<td width="50%">
+
+### 🌐 Web Panel
+- Browser-based pairing at `your-server:3092`
+- QR code scan or pairing code (no phone required on server)
+- Works on Heroku, Railway, Replit, VPS — anywhere
 
 </td>
 </tr>
 </table>
 
-</div>
+<br/>
 
 ---
 
-## 📋 Commands
+<br/>
 
-<details>
-<summary>
-  <b>&nbsp;👥&nbsp; Group Management &nbsp;—&nbsp; click to expand</b>
-</summary>
+## 🚀 Quick Start
+
+### 📋 Prerequisites
+
+Before you begin, make sure you have:
+
+| Requirement | Version | Download |
+|------------|---------|---------|
+| Node.js | v20 or higher | [nodejs.org](https://nodejs.org) |
+| npm | v9 or higher | *(comes with Node.js)* |
+| Git | Latest | [git-scm.com](https://git-scm.com) |
+| MongoDB | Free Atlas account | [mongodb.com](https://mongodb.com/cloud/atlas) |
 
 <br/>
 
-> All group commands require **Admin** rights.
+### 💻 Local Installation (VPS / PC / Server)
 
-| Command | What it does |
-|---|---|
-| `.tagall` | Tag every member in the group |
-| `.tagall Hello everyone!` | Tag everyone with your custom message |
-| `.kick @user` | Remove someone from the group |
-| `.promote @user` | Make someone an admin |
-| `.demote @user` | Remove someone's admin role |
-| `.hidetag <msg>` | Tag all members — list stays hidden |
-| `.mute on` | Lock group (only admins can message) |
-| `.mute off` | Unlock group for everyone |
-| `.grouplink` | Get the group invite link |
-| `.warn @user` | Give a warning — **3 warnings = auto kick** |
-| `.resetwarn @user` | Clear all warnings for a member |
-| `.warnlist` | See all current warnings in the group |
-
-<br/>
-
-</details>
-
-<details>
-<summary>
-  <b>&nbsp;🛠️&nbsp; Tools & Utilities &nbsp;—&nbsp; click to expand</b>
-</summary>
-
-<br/>
-
-| Command | What it does | Example |
-|---|---|---|
-| `.tiktok <link>` | Download TikTok video (no watermark) | `.tiktok https://vt.tiktok.com/xxx` |
-| `.calc <math>` | Solve any math expression | `.calc 150*12/4+200` |
-| `.wiki <topic>` | Search Wikipedia | `.wiki Black Hole` |
-| `.fancy <text>` | Get 90+ fancy font styles | `.fancy Shehbaz` |
-| `.weather <city>` | Get live weather | `.weather Lahore` |
-| `.shorturl <url>` | Make any URL short | `.shorturl https://google.com` |
-| `.getpp @user` | Download someone's profile photo | `.getpp @contact` |
-
-<br/>
-
-</details>
-
-<details>
-<summary>
-  <b>&nbsp;📸&nbsp; Media & Stickers &nbsp;—&nbsp; click to expand</b>
-</summary>
-
-<br/>
-
-| Command | How to use |
-|---|---|
-| `.sticker` | Reply to any **image or video** — converts to sticker |
-| `.take` | Reply to a **sticker** — rename it (`.take BotName PackName`) |
-
-<br/>
-
-</details>
-
-<details>
-<summary>
-  <b>&nbsp;👑&nbsp; Owner Commands &nbsp;—&nbsp; click to expand</b>
-</summary>
-
-<br/>
-
-> 🔐 Only your number (set in `.env`) can use these.
-
-| Command | What it does |
-|---|---|
-| `.broadcast <message>` | Send a message to **all your groups** at once |
-| `.restart` | Restart the bot remotely from WhatsApp |
-
-<br/>
-
-</details>
-
----
-
-## 📦 Installation
-
-<details open>
-<summary>
-  <b>&nbsp;✅&nbsp; Step-by-Step Install Guide</b>
-</summary>
-
-<br/>
-
-### 1️⃣ — Clone the project
-
+**1️⃣ Clone the repository**
 ```bash
-git clone https://github.com/shehbaz-dev/SHEHBAZ-MD.git
-cd SHEHBAZ-MD
+git clone https://github.com/shehbaz-dev/shehbaz-md.git
+cd shehbaz-md
 ```
 
-### 2️⃣ — Install packages
-
+**2️⃣ Install all dependencies**
 ```bash
 npm install
 ```
 
-> 💡 First time takes 2–5 minutes. Do not close the terminal.
-
-### 3️⃣ — Edit index.js file 
-
+**3️⃣ Set up environment**
+```bash
+cp .env.example .env
 ```
-nano index.js
-```
-<br/>
+Open `.env` in any text editor and fill in your values *(see [Configuration](#️-configuration) below)*
 
-edit in these values:
-
-```env
-MONGODB_URI  =  mongodb+srv://username:password@cluster.mongodb.net/shehbazmd
-OWNER_NUMBER =  923001234567   ← your number, with country code, no +
-PORT         =  8000
-```
-
-<br/><br/>
-
-<details>
-<summary>📌 How to get MongoDB URI (free)</summary>
-
-<br/>
-
-1. Go to → **[mongodb.com/atlas](https://mongodb.com/atlas)** → Sign up free
-2. Create a **free M0 cluster**
-3. Go to **Connect → Drivers**
-4. Copy the connection string
-5. Replace `<password>` with your DB password
-6. Paste as `MONGODB_URI` in your `.env` file
-
-</details>
-
-### 4️⃣ — Start the bot
-
+**4️⃣ Start the bot**
 ```bash
 npm start
 ```
-<img src="https://i.postimg.cc/CKkvkM1z/GIF-20260604-114106-957.gif" width="330" alt="Startup GiF"/>
 
+**5️⃣ Pair your WhatsApp**
 
-</details>
+Open your browser → `http://localhost:3092`
 
----
+- **Option A:** Scan the QR code with WhatsApp
+- **Option B:** Enter your phone number to get a pairing code (no phone needed on server)
 
-## ⚡ Pairing Guide
-
-<details open>
-<summary>
-  <b>&nbsp;📱&nbsp; How to connect your WhatsApp</b>
-</summary>
+> ✅ Once paired, the bot is live. Session is saved to MongoDB — no need to re-pair on restart.
 
 <br/>
 
-```
-Step 1 → Start bot:   npm start
-Step 2 → Open:        http://localhost:8000    (in your browser)
-Step 3 → Enter:       Your WhatsApp number with country code
-                      ✅  923001234567
-                      ❌  +923001234567  or  03001234567
-
-Step 4 → A PAIRING CODE will appear on your screen
-Step 5 → On Phone:    WhatsApp → Settings → Linked Devices
-                      → Link a Device → Link with Phone Number
-Step 6 → Type the code → ✅ Connected!
-```
-
-> 🔒 Your session is saved in MongoDB — no need to pair again after restart.
-
-</details>
-
 ---
+
+<br/>
 
 ## ⚙️ Configuration
 
-<details>
-<summary>
-  <b>&nbsp;🔧&nbsp; All settings in setting.js — click to expand</b>
-</summary>
+Rename `.env.example` → `.env` and fill in your values:
+
+```env
+# ╔══════════════════════════════════════╗
+# ║        SHEHBAZ-MD CONFIGURATION     ║
+# ╚══════════════════════════════════════╝
+
+# ── 👑 Owner ───────────────────────────────────────────────────
+OWNER_NUMBER=923XXXXXXXXX           # Your WhatsApp number (no + or spaces)
+OWNER_NAME=Shehbaz                  # Your name (shown in .owner command)
+
+# ── 🤖 Bot ─────────────────────────────────────────────────────
+BOT_NAME=SHEHBAZ-MD                 # Bot display name
+PREFIX=.                            # Command prefix (. or ! or / etc.)
+MODE=public                         # public = everyone | private = owner only
+
+# ── 🗄️ Database (REQUIRED — bot won't start without this) ──────
+MONGODB_URI=mongodb+srv://USER:PASS@cluster.mongodb.net/shehbazmd
+
+# ── 🛡️ Protection Features ─────────────────────────────────────
+ANTI_DELETE=true                    # Forward deleted messages to your inbox
+ANTI_CALL=false                     # Auto-reject incoming calls
+ANTI_LINK=true                      # Remove group invite links
+ANTI_BAD=false                      # Remove bad words in groups
+ANTI_BOT=true                       # Block other bots
+ANTI_VV=true                        # Intercept view-once → send to your inbox
+
+# ── 🔄 Automation ───────────────────────────────────────────────
+AUTO_STATUS_SEEN=true               # Auto-view all statuses
+AUTO_REACT=false                    # React to messages with random emoji
+AUTO_REPLY=false                    # Enable away message
+AUTO_REPLY_MSG=Hi! I'm busy right now, will reply soon.
+AUTO_REPLY_DELAY=60                 # Seconds between auto-replies per person
+
+# ── 🤖 AI Chat ──────────────────────────────────────────────────
+AI_ENABLED=false                    # Auto-reply DMs with AI (.ai on to toggle live)
+OPENAI_API_KEY=                     # Optional — leave blank to use FREE Pollinations.ai
+AI_MODEL=gpt-3.5-turbo              # Model to use (gpt-4, gpt-3.5-turbo, etc.)
+AI_BASE_URL=                        # Custom endpoint (OpenRouter, Together, etc.)
+AI_SYSTEM_PROMPT=You are a helpful WhatsApp assistant. Keep responses short and friendly.
+
+# ── 🌐 Server ───────────────────────────────────────────────────
+PORT=3092
+```
+
+### 📊 Full Settings Reference
+
+| Variable | Required | Default | What it does |
+|----------|:--------:|---------|-------------|
+| `OWNER_NUMBER` | ✅ Yes | — | Your WhatsApp number — gives you owner-only commands |
+| `MONGODB_URI` | ✅ Yes | — | MongoDB connection string — stores session & data |
+| `BOT_NAME` | ❌ No | `SHEHBAZ-MD` | Name shown in menu and messages |
+| `PREFIX` | ❌ No | `.` | Character before commands (e.g. `.menu`) |
+| `MODE` | ❌ No | `public` | `public` lets everyone use the bot; `private` is owner-only |
+| `ANTI_DELETE` | ❌ No | `true` | Forwards deleted messages + media to your DM |
+| `ANTI_CALL` | ❌ No | `false` | Automatically rejects all incoming WhatsApp calls |
+| `ANTI_LINK` | ❌ No | `true` | Deletes group invite links posted by non-admins |
+| `ANTI_VV` | ❌ No | `true` | Silently copies every view-once to your inbox |
+| `AUTO_STATUS_SEEN` | ❌ No | `true` | Auto-views all statuses |
+| `AUTO_REACT` | ❌ No | `false` | Reacts to messages with a random emoji |
+| `AUTO_REPLY` | ❌ No | `false` | Sends an away message in DMs |
+| `AI_ENABLED` | ❌ No | `false` | Enables AI auto-reply in DMs |
+| `OPENAI_API_KEY` | ❌ No | — | Your OpenAI key — blank = free Pollinations.ai |
+| `AI_MODEL` | ❌ No | `gpt-3.5-turbo` | Which AI model to use |
+| `AI_SYSTEM_PROMPT` | ❌ No | *(friendly assistant)* | Customize the AI's personality |
 
 <br/>
 
-```js
-export default {
-    //  ────────────────────────────────────────────────
-    //  BASIC INFO
-    //  ────────────────────────────────────────────────
-    BOT_NAME:        "SHEHBAZ-MD",       // Bot name shown in messages
-    OWNER_NAME:      "Shehbaz",          // Your name
-    PREFIX:          ".",                 // Change command prefix: . / ! / #
+---
 
-    //  ────────────────────────────────────────────────
-    //  MODE
-    //  ────────────────────────────────────────────────
-    MODE:            "public",
-    //               "public"  = everyone can use commands
-    //               "private" = only owner can use commands
+<br/>
 
-    //  ────────────────────────────────────────────────
-    //  AUTOMATIC FEATURES (true = ON, false = OFF)
-    //  ────────────────────────────────────────────────
-    AUTO_REACT:       "true",   // React with emoji to every message
-    READ_MESSAGE:     "true",   // Auto-read messages (blue ticks)
-    AUTO_STATUS_SEEN: "true",   // Auto-view WhatsApp statuses
+## 📋 All Commands
 
-    //  ────────────────────────────────────────────────
-    //  PROTECTION FEATURES
-    //  ────────────────────────────────────────────────
-    ANTI_DELETE:      "true",   // Forward deleted messages to owner
-    ANTI_CALL:        "true",   // Auto reject incoming calls
-    ANTI_LINK:        "false",  // Remove links from groups (set true to enable)
+> Default prefix: **`.`** — change with `PREFIX` in `.env`
 
-    //  ────────────────────────────────────────────────
-    //  AUTO REPLY  (for DMs only)
-    //  ────────────────────────────────────────────────
-    AUTO_REPLY:       "false",
-    AUTO_REPLY_MSG:   "Hi! Bot is active. Please wait for owner.",
-    AUTO_REPLY_DELAY: "60",     // Seconds before replying to same person again
-}
-```
+### 👑 Owner Commands
+| Command | Description |
+|---------|-------------|
+| `.settings` | View all current bot settings and feature status |
+| `.ai on` | Enable AI auto-reply for private DMs |
+| `.ai off` | Disable AI auto-reply |
+| `.broadcast <message>` | Send a message to all your groups |
+| `.restart` | Restart the bot process |
+
+### 🛡️ Admin Commands
+| Command | Description |
+|---------|-------------|
+| `.promote @user` | Promote user to group admin |
+| `.demote @user` | Remove user's admin rights |
+| `.kick @user` | Remove user from the group |
+| `.mute` | Lock the group — only admins can send messages |
+| `.unmute` | Unlock the group |
+| `.hidetag <message>` | Silently tag all group members |
+| `.warn @user` | Issue a warning to a user |
+
+### 👁️ Privacy Commands
+| Command | Description |
+|---------|-------------|
+| `.vv` | **Reply to a 👁️ view-once** → bot reveals the photo/video/audio |
+
+### 🤖 AI Commands
+| Command | Description |
+|---------|-------------|
+| `.ai <question>` | Ask AI anything — works anywhere |
+| `.ai on` | Turn on AI DM auto-reply *(owner only)* |
+| `.ai off` | Turn off AI DM auto-reply *(owner only)* |
+
+### 🎨 Media & Tools
+| Command | Description |
+|---------|-------------|
+| `.sticker` | Convert image / video / GIF to WhatsApp sticker |
+| `.removebg` | Remove background from image (AI-powered) |
+| `.remini` | Enhance and upscale low-quality images |
+| `.fancy <text>` | Convert text into stylish unicode fonts |
+| `.calc <expression>` | Solve any math expression |
+| `.shorturl <url>` | Shorten a URL |
+
+### 📥 Downloaders
+| Command | Description |
+|---------|-------------|
+| `.yt <search query>` | Search and download YouTube video |
+| `.tiktok <url>` | Download TikTok video (no watermark) |
+| `.ig <url>` | Download Instagram reel or photo |
+| `.fb <url>` | Download Facebook video |
+| `.gdrive <url>` | Download file from Google Drive |
+| `.mediafire <url>` | Download from MediaFire |
+| `.apk <app name>` | Find APK download link |
+| `.wallpaper <query>` | Search and send HD wallpapers |
+
+### 🔍 Search & Info
+| Command | Description |
+|---------|-------------|
+| `.wiki <topic>` | Get Wikipedia summary on any topic |
+| `.weather <city>` | Real-time weather information |
+| `.simdb <number>` | SIM card owner information lookup |
+
+### ℹ️ General
+| Command | Description |
+|---------|-------------|
+| `.menu` | Show the full command menu |
+| `.owner` | Display owner contact information |
+
+<br/>
+
+---
+
+<br/>
+
+## ☁️ Deploy to Cloud
+
+<br/>
+
+<details>
+<summary><b>🟣 Heroku (Recommended for beginners)</b></summary>
+
+<br/>
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shehbaz-dev/shehbaz-md)
+
+1. Click **Deploy to Heroku** above
+2. Create a free Heroku account if you don't have one
+3. Fill in all environment variables in the form
+4. Click **Deploy App** and wait for build
+5. Click **Open App** → scan QR or enter pairing code
+6. ✅ Done — bot is live 24/7
+
+> 💡 Use Heroku's free eco dynos or paid basic plan for always-on hosting
 
 </details>
 
----
+<br/>
 
-## 🖥️ Free Hosting & Panels
-
-> ✅ **Recommended for 24/7 running — no Termux needed!**
-
-<details open>
-<summary>
-  <b>&nbsp;🆓&nbsp; Best Free Hosting Options — click to expand</b>
-</summary>
+<details>
+<summary><b>🔵 Railway</b></summary>
 
 <br/>
 
-### ⭐ Option 1 — Railway (Best for Beginners)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template)
 
-| | |
-|---|---|
-| 🌐 Link | [railway.app](https://railway.app) |
-| 💰 Cost | **Free** — $5 credit/month |
-| ⏰ Uptime | 24/7 |
-| 🚀 Deploy | Connect GitHub → 1 click deploy |
-| ✅ Supports | Node.js, MongoDB (built-in) |
+1. Click deploy above and connect your GitHub
+2. Set all environment variables in the **Variables** tab
+3. Railway auto-deploys from your repo
+4. Visit the generated URL to pair your WhatsApp
+5. ✅ Done
 
-```
-Steps:
-1. Go to railway.app → Sign up with GitHub
-2. New Project → Deploy from GitHub repo
-3. Select SHEHBAZ-MD repo
-4. Add Variables: MONGODB_URI, OWNER_NUMBER, PORT
-5. Deploy → Done! ✅
-```
+</details>
 
----
+<br/>
 
-### ⭐ Option 2 — Render
+<details>
+<summary><b>🟡 Replit</b></summary>
 
-| | |
-|---|---|
-| 🌐 Link | [render.com](https://render.com) |
-| 💰 Cost | **Free** tier available |
-| ⏰ Uptime | 24/7 on paid / sleeps after 15min on free |
-| ✅ Supports | Node.js, auto-deploy from GitHub |
+<br/>
 
-```
-Steps:
-1. Go to render.com → Sign up
-2. New → Web Service → Connect GitHub
-3. Select repo → Runtime: Node
-4. Start Command: node index.js
-5. Add Environment Variables → Deploy ✅
-```
+1. Fork this repl or upload the zip
+2. Go to **Secrets** tab (🔒 icon on sidebar)
+3. Add each environment variable as a secret
+4. Click **Run ▶**
+5. Open the **Webview** tab and pair your number
+6. ✅ Done
 
----
+> 💡 Enable **Always On** in Replit to keep the bot running 24/7
 
-### ⭐ Option 3 — Koyeb
+</details>
 
-| | |
-|---|---|
-| 🌐 Link | [koyeb.com](https://koyeb.com) |
-| 💰 Cost | **Free** — always-on free tier |
-| ⏰ Uptime | 24/7 |
-| ✅ Supports | Node.js, Docker |
+<br/>
 
----
+<details>
+<summary><b>🖥️ VPS / Linux Server</b></summary>
 
-### ⭐ Option 4 — Okteto
-
-| | |
-|---|---|
-| 🌐 Link | [cloud.okteto.com](https://cloud.okteto.com) |
-| 💰 Cost | **Free** |
-| ⏰ Uptime | 24/7 |
-| ✅ Supports | Docker / Node.js |
-
----
-
-### 💡 Option 5 — Free VPS (Bonus)
-
-These give you a full Linux server — best for advanced users:
-
-| Provider | Free Plan |
-|---|---|
-| [Oracle Cloud](https://cloud.oracle.com) | **Always Free** — 2 VMs, 24GB RAM total |
-| [Google Cloud](https://cloud.google.com) | 90-day $300 free credit |
-| [AWS EC2](https://aws.amazon.com) | 12 months free tier |
-| [Hetzner](https://hetzner.com) | €20 free credit for new users |
-
-**On any VPS (Ubuntu/Debian), install like this:**
+<br/>
 
 ```bash
+# Update system
+sudo apt update && sudo apt upgrade -y
+
 # Install Node.js 20
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 
-# Install PM2 (keeps bot running 24/7)
+# Install PM2 (process manager — keeps bot running)
 npm install -g pm2
 
-# Clone and run
-git clone https://github.com/shehbaz-dev/SHEHBAZ-MD.git
-cd SHEHBAZ-MD
-npm install
-cp .env.example .env
-nano .env         # fill in your values
+# Clone repo
+git clone https://github.com/shehbaz-dev/shehbaz-md.git
+cd shehbaz-md
 
+# Install dependencies
+npm install
+
+# Configure
+cp .env.example .env
+nano .env   # fill in your values
+
+# Start with PM2
 pm2 start index.js --name shehbaz-md
+
+# Auto-start on server reboot
+pm2 startup
 pm2 save
-pm2 startup       # auto-start on server reboot
+```
+
+**Useful PM2 commands:**
+```bash
+pm2 status          # Check bot status
+pm2 logs shehbaz-md # View live logs
+pm2 restart shehbaz-md
+pm2 stop shehbaz-md
 ```
 
 </details>
-
----
-
-## 🔌 Add Your Own Plugin
-
-<details>
-<summary>
-  <b>&nbsp;💻&nbsp; How to write a custom plugin — click to expand</b>
-</summary>
 
 <br/>
 
-Create a new file: `plugins/myplugin.js`
+---
 
-```js
-import { cmd } from '../lib/command.js';
+<br/>
 
-cmd({
-    pattern: 'hello',           // Command: .hello
-    alias: ['hi'],              // Also works as: .hi
-    desc: 'Greet someone',
-    category: 'fun'
-}, async (sock, msg, ctx) => {
+## 🔑 Setting Up MongoDB (Free in 5 minutes)
 
-    const { from, reply, args, isOwner, isGroup } = ctx;
+MongoDB stores your bot session so you don't have to re-scan QR on every restart.
 
-    // Get what user typed after the command
-    const name = args.join(' ') || 'there';
+1. Go to **[mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)** and sign up free
+2. Click **Create** → choose **M0 Free** cluster → any region
+3. Create a **database user** (username + password — remember these)
+4. Go to **Network Access** → Add IP → click **Allow Access from Anywhere**
+5. Go to **Database** → click **Connect** → **Drivers**
+6. Copy the connection string — it looks like:
+   ```
+   mongodb+srv://youruser:yourpassword@cluster0.xxxxx.mongodb.net/
+   ```
+7. Replace `<password>` with your actual password
+8. Add `/shehbazmd` at the end:
+   ```
+   mongodb+srv://youruser:yourpassword@cluster0.xxxxx.mongodb.net/shehbazmd
+   ```
+9. Paste this as `MONGODB_URI` in your `.env`
 
-    reply(`👋 Hello, ${name}!`);
+<br/>
 
-});
+---
+
+<br/>
+
+## 🗂️ Project Structure
+
+```
+📁 shehbaz-md/
+│
+├── 📄 index.js                 ← Main bot entry point
+├── 📄 setting.js               ← Config loader (reads .env)
+├── 📄 pair.js                  ← Web pairing server
+├── 📄 .env.example             ← Environment variable template
+├── 📄 package.json
+│
+├── 📁 lib/
+│   ├── 📄 antiDelete.js        ← Anti-delete: cache + media resend to owner
+│   ├── 📄 command.js           ← Plugin registration helper
+│   ├── 📄 commandRegistry.js   ← Central command store
+│   └── 📄 mongoAuth.js         ← MongoDB auth state manager
+│
+├── 📁 plugins/                 ← All bot commands live here
+│   ├── 📄 ai.js                ← AI chat (.ai, auto-reply)
+│   ├── 📄 vv.js                ← ViewOnce bypass
+│   ├── 📄 sticker.js           ← Sticker maker
+│   ├── 📄 features.js          ← Core features + .settings command
+│   ├── 📄 menu.js              ← Bot menu
+│   ├── 📄 autotyping.js        ← Auto typing indicator
+│   ├── 📄 YouTube.js           ← YouTube downloader
+│   ├── 📄 TikTok.js            ← TikTok downloader
+│   └── 📄 ...                  ← 20+ more plugins
+│
+├── 📁 public/                  ← Web pairing panel (HTML + CSS + JS)
+└── 📁 data/                    ← Persistent bot config storage
 ```
 
-**Restart the bot after adding any new plugin.**
-
-</details>
+<br/>
 
 ---
 
-## 🐛 Troubleshooting
+<br/>
 
-<details>
-<summary><b>❌ Bot doesn't start</b></summary>
-
-- Is `MONGODB_URI` correct in your `.env`?
-- Is Node.js v20+? Run: `node --version`
-- Check the error in your terminal
-
-</details>
-
-<details>
-<summary><b>❌ Commands not working</b></summary>
-
-- Are you using the right prefix? Default is `.`
-- If MODE is `private`, only the owner can use commands
-- Look for plugin load errors on startup
-
-</details>
-
-<details>
-<summary><b>❌ Pairing code won't show</b></summary>
-
-- Open `http://localhost:8000` in browser after starting bot
-- Number format: `923001234567` ✅ — NOT `+923...` ❌
-- Make sure port `8000` is not blocked by firewall
-
-</details>
-
-<details>
-<summary><b>❌ Bot keeps disconnecting</b></summary>
-
-- It auto-reconnects — wait a few seconds
-- If on free hosting — use Railway or Koyeb for stable uptime
-- Use `pm2` on VPS to keep it running forever
-
-</details>
-
-<details>
-<summary><b>❌ Termux issues (npm install fails)</b></summary>
-
-> ⚠️ **Termux is NOT supported.** Please use Railway, Render, or a free VPS instead.
->
-> See [Free Hosting section](#%EF%B8%8F-free-hosting--panels) above.
-
-</details>
-
----
-
-## 🛠️ Built With
+## 🤝 Support
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nodejs,mongodb,js,git,github,linux&theme=dark"/>
+Stuck somewhere? Need help? We've got you covered.
+
+<br/>
+
+[![WhatsApp Support](https://img.shields.io/badge/💬_WhatsApp-Support_Group-25D366?style=for-the-badge)](https://chat.whatsapp.com/YOUR_LINK_HERE)
+[![GitHub Issues](https://img.shields.io/badge/🐛_GitHub-Report_Issue-181717?style=for-the-badge)](https://github.com/shehbaz-dev/shehbaz-md/issues/new)
+
+<br/>
+
+**Before opening an issue, please:**
+- ✅ Make sure Node.js v20+ is installed
+- ✅ Check your `MONGODB_URI` is correct
+- ✅ Read the error in the terminal carefully
+- ✅ Search existing issues to see if it's already solved
 
 </div>
 
+<br/>
+
 ---
+
+<br/>
 
 ## 🤝 Contributing
 
-Contributions are welcome! Fork → Branch → PR.
+Contributions are welcome! Here's how:
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+```bash
+# 1. Fork the repo on GitHub
+
+# 2. Clone your fork
+git clone https://github.com/YOUR_USERNAME/shehbaz-md.git
+
+# 3. Create a feature branch
+git checkout -b feature/my-awesome-plugin
+
+# 4. Make your changes, then commit
+git commit -m "feat: add my awesome plugin"
+
+# 5. Push and open a Pull Request
+git push origin feature/my-awesome-plugin
+```
+
+> Want to add a plugin? Drop a `.js` file in `/plugins/` using the `cmd()` helper — it gets auto-loaded on start. See existing plugins for the pattern.
+
+<br/>
 
 ---
 
-## 💬 Support
+<br/>
+
+## ⚠️ Legal Disclaimer
+
+> This project is intended for **personal and educational use only**.  
+> Using this bot to spam, harass, scrape data, or violate [WhatsApp's Terms of Service](https://www.whatsapp.com/legal/terms-of-service) is strictly prohibited.  
+> The developer holds **no responsibility** for account bans, data loss, or misuse of this software.  
+> Use at your own risk.
+
+<br/>
+
+---
+
+<br/>
 
 <div align="center">
 
-| | |
-|---|:---:|
-| 💬 **WhatsApp** | [![Chat](https://img.shields.io/badge/Join%20WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbD4UbdCRs1mNQPRZt2F) |
-| 🐛 **Bug Report** | [![Bug](https://img.shields.io/badge/Report%20a%20Bug-red?style=for-the-badge&logo=github&logoColor=white)](../../issues/new?template=bug_report.md) |
-| 💡 **Feature Request** | [![Feature](https://img.shields.io/badge/Request%20Feature-blue?style=for-the-badge&logo=github&logoColor=white)](../../issues/new?template=feature_request.md) |
+## 📄 License
 
-</div>
+Released under the **MIT License** — free to use, modify, and distribute.  
+See [LICENSE](LICENSE) for full details.
 
----
-
-## 📜 License
-
-Licensed under **[MIT](LICENSE)** — free to use, fork, and modify. Credit appreciated! 🙏
+<br/>
 
 ---
 
-<div align="center">
+<br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=130&section=footer" width="100%"/>
+```
+╭━━━〔 SHEHBAZ-MD 〕━━━┈⊷
+┃ ⋄ Built with ❤️ by Shehbaz—Dev
+┃ ⋄ Powered by @whiskeysockets/baileys
+┃ ⋄ Star ⭐ the repo if this helped you!
+╰━━━━━━━━━━━━━━━━━━┈⊷
+```
 
-**⭐ Star this repo if it helped you!**
+[![Star History](https://img.shields.io/github/stars/shehbaz-dev/shehbaz-md?style=social)](https://github.com/shehbaz-dev/shehbaz-md/stargazers)
 
-Made with ❤️ by **[Shehbaz Dev](https://shehbaz-dev.vercel.app)**
-
-> ⚡ *Powered by Shehbaz—Dev*
+*If SHEHBAZ-MD made your life easier, a ⭐ star means the world. Thank you!*
 
 </div>
