@@ -1,7 +1,8 @@
+
 /**
- * SHEHBAZ-MD v4.5.0 - Cloud Configuration Manager
- * @author Shehbaz—Dev [Cyber Security Researcher]
- * @description Centralized cloud configuration with dynamic MongoDB fallbacks
+ * HASNAIN-MD v4.5.0 - Cloud Configuration Manager
+ * Customized for Hasnain
+ * Configuration with environment and MongoDB fallbacks
  */
 
 import fs from 'fs';
@@ -14,8 +15,14 @@ import mongoose from 'mongoose';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Load local environment variables as absolute structural boot override
-const envPaths = ['./config.env', './.env', join(__dirname, 'config.env'), join(__dirname, '.env')];
+// Load environment variables
+const envPaths = [
+    './config.env',
+    './.env',
+    join(__dirname, 'config.env'),
+    join(__dirname, '.env')
+];
+
 for (const envPath of envPaths) {
     if (fs.existsSync(envPath)) {
         dotenv.config({ path: envPath });
@@ -23,117 +30,164 @@ for (const envPath of envPaths) {
     }
 }
 
-// Global Runtime Memory Settings Cache Buffer
+// Cloud configuration cache
 const cloudConfigCache = new Map();
 
-// Helper parsing controllers
+// Boolean helper
 function toBoolean(text) {
     if (typeof text === 'boolean') return text;
+
     if (typeof text === 'string') {
         const lower = text.toLowerCase().trim();
-        return lower === 'true' || lower === '1' || lower === 'yes' || lower === 'on';
+        return ['true', '1', 'yes', 'on'].includes(lower);
     }
+
     return false;
 }
 
+// Environment variable helper
 function getEnv(key, defaultValue, type = 'string') {
     const value = process.env[key];
-    if (value === undefined || value === '') return defaultValue;
+
+    if (value === undefined || value === '') {
+        return defaultValue;
+    }
+
     switch (type) {
-        case 'number': const num = Number(value); return isNaN(num) ? defaultValue : num;
-        case 'boolean': return toBoolean(value);
-        case 'array': return value.split(',').map(v => v.trim()).filter(v => v);
-        default: return value;
+        case 'number': {
+            const num = Number(value);
+            return Number.isNaN(num) ? defaultValue : num;
+        }
+
+        case 'boolean':
+            return toBoolean(value);
+
+        case 'array':
+            return value.split(',').map(v => v.trim()).filter(Boolean);
+
+        default:
+            return value;
     }
 }
 
-// Cache absolute owner layers
-const rawOwnerNumbers = getEnv('OWNER_NUMBER', '923212844383', 'string');
-const OWNER_NUMBERS = rawOwnerNumbers.split(',').map(n => n.trim());
+// Owner numbers
+// Add your own WhatsApp number to config.env when ready.
+// Use country code without +, for example: 923001234567
+const rawOwnerNumbers = getEnv('OWNER_NUMBER', '', 'string');
 
-// ===============================
-// 🗄️ CORE CONFIGURATION SCHEMA LAYER
-// ===============================
+const OWNER_NUMBERS = rawOwnerNumbers
+    .split(',')
+    .map(n => n.trim())
+    .filter(Boolean);
+
+// Core configuration
 const config = {
-    // Session Server Variables
+    // Session server variables
     SESSION_ID: process.argv[2] || getEnv('SESSION_ID', '', 'string'),
     PORT: getEnv('PORT', 8000, 'number'),
-    
-    // Core Parameters
+
+    // Bot identity
     PREFIX: getEnv('PREFIX', '.', 'string'),
-    BOT_NAME: getEnv('BOT_NAME', 'SHEHBAZ-MD', 'string'),
-    STICKER_NAME: getEnv('STICKER_NAME', 'SHEHBAZ-MD', 'string'),
+    BOT_NAME: getEnv('BOT_NAME', 'HASNAIN-MD', 'string'),
+    STICKER_NAME: getEnv('STICKER_NAME', 'HASNAIN-MD', 'string'),
     MODE: getEnv('MODE', 'public', 'string').toLowerCase(),
-    
-    // Owner Ecosystem
+
+    // Owner settings
     OWNER_NUMBERS: OWNER_NUMBERS,
-    OWNER_NAME: getEnv('OWNER_NAME', 'Shehbaz', 'string'),
-    
-    // Cloud Security Protocols (Stored as String or Boolean mapping fallbacks)
+    OWNER_NAME: getEnv('OWNER_NAME', 'Hasnain', 'string'),
+
+    // Security settings
     ANTI_CALL: getEnv('ANTI_CALL', 'true', 'string'),
     ANTI_DELETE: getEnv('ANTI_DELETE', 'true', 'string'),
     ANTI_LINK: getEnv('ANTI_LINK', 'true', 'string'),
     ANTI_BAD: getEnv('ANTI_BAD', 'false', 'string'),
     ANTI_BOT: getEnv('ANTI_BOT', 'true', 'string'),
     ANTI_VV: getEnv('ANTI_VV', 'true', 'string'),
-    
-    // Automation Pipeline Tracking Matrix
+
+    // Automation settings
     AUTO_STATUS_SEEN: getEnv('AUTO_STATUS_SEEN', 'true', 'string'),
     READ_MESSAGE: getEnv('READ_MESSAGE', 'true', 'string'),
     SEND_WELCOME: getEnv('SEND_WELCOME', 'false', 'string'),
     GOODBYE: getEnv('GOODBYE', 'false', 'string'),
     AUTO_REACT: getEnv('AUTO_REACT', 'true', 'string'),
 
-    // Auto-Reply
-    AUTO_REPLY:       getEnv('AUTO_REPLY',       'false', 'string'),
-    AUTO_REPLY_MSG:   getEnv('AUTO_REPLY_MSG',   '',      'string'),
-    AUTO_REPLY_DELAY: getEnv('AUTO_REPLY_DELAY', '60',    'string'),
-    
-    // Dynamic Cloud Operations Link Engine Protocols
+    // Auto-reply settings
+    AUTO_REPLY: getEnv('AUTO_REPLY', 'false', 'string'),
+    AUTO_REPLY_MSG: getEnv('AUTO_REPLY_MSG', '', 'string'),
+    AUTO_REPLY_DELAY: getEnv('AUTO_REPLY_DELAY', '60', 'string'),
+
+    // Reload configuration from MongoDB
     async reloadFromCloud() {
         try {
             if (mongoose.connection.readyState !== 1) return;
+
             const db = mongoose.connection.db;
             const collection = db.collection('global_system_configs');
-            
-            const systemSettingsDoc = await collection.findOne({ configId: "GLOBAL_MATRIX" });
+
+            const systemSettingsDoc = await collection.findOne({
+                configId: 'GLOBAL_MATRIX'
+            });
+
             if (systemSettingsDoc && systemSettingsDoc.settings) {
                 Object.keys(systemSettingsDoc.settings).forEach(key => {
                     config[key] = systemSettingsDoc.settings[key];
-                    cloudConfigCache.set(key, systemSettingsDoc.settings[key]);
+                    cloudConfigCache.set(
+                        key,
+                        systemSettingsDoc.settings[key]
+                    );
                 });
-                console.log(chalk.green(`✓ [CLOUD CONFIG] Global System Parameters Synced via Live Cluster Cluster.`));
+
+                console.log(
+                    chalk.green(
+                        '✓ [HASNAIN-MD] Cloud configuration synced.'
+                    )
+                );
             }
         } catch (err) {
-            console.log(chalk.yellow(`⚠️ Cloud sync skipped during runtime handshake initializing. Using process env.`));
+            console.log(
+                chalk.yellow(
+                    '⚠️ Cloud sync skipped. Using local configuration.'
+                )
+            );
         }
     },
-    
+
+    // Update configuration in MongoDB
     async updateCloudSetting(key, value) {
         try {
             config[key] = value;
             cloudConfigCache.set(key, value);
+
             if (mongoose.connection.readyState === 1) {
                 const db = mongoose.connection.db;
                 const collection = db.collection('global_system_configs');
                 const updatedSettings = Object.fromEntries(cloudConfigCache);
-                
+
                 await collection.findOneAndUpdate(
-                    { configId: "GLOBAL_MATRIX" },
-                    { $set: { settings: updatedSettings, lastUpdated: Date.now() } },
+                    { configId: 'GLOBAL_MATRIX' },
+                    {
+                        $set: {
+                            settings: updatedSettings,
+                            lastUpdated: Date.now()
+                        }
+                    },
                     { upsert: true }
                 );
             }
+
             return true;
-        } catch (e) {
+        } catch (err) {
             return false;
         }
     }
 };
 
-// Auto-validation logging layer 
+// Startup message
 if (process.env.NODE_ENV !== 'production') {
-    console.log(chalk.dim('📋 Processing Deployment Environmental Layout Layer...'));
+    console.log(
+        chalk.dim('📋 HASNAIN-MD configuration loaded.')
+    );
 }
 
 export default config;
+                
